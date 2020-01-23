@@ -1,0 +1,345 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": []
+      },
+      {
+        "line": 19,
+        "name": "Assert management information report results",
+        "description": "",
+        "id": "practical-test;assert-management-information-report-results",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 20,
+            "name": "I have navigated to the AUT",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 21,
+            "name": "I log in with valid credentials",
+            "match": {},
+            "rows": [
+              {
+                "cells": [
+                  "EMAIL",
+                  "PASSWORD"
+                ]
+              },
+              {
+                "cells": [
+                  "njF83mf@jN7p.z7B",
+                  "3K4Mq*S%1ejqV0iu^glcK\u0026o$m4q^D157"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 24,
+            "name": "I navigate to the Absence Overview page",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 25,
+            "name": "I set the time window",
+            "match": {},
+            "rows": [
+              {
+                "cells": [
+                  "START DATE",
+                  "END DATE"
+                ]
+              },
+              {
+                "cells": [
+                  "30/04/2019",
+                  "30/10/2019"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 28,
+            "name": "I update the data",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 29,
+            "name": "The employee surnames on the first 5 pages should include \"Streater\", \"Acland\" and \"De la Yglesia\", but not \"Graddon\" or \"Shoobridge\"",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 30,
+            "name": "Print the number of occurrences to the browser console",
+            "match": {},
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@practical"
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": []
+      },
+      {
+        "line": 33,
+        "name": "Compare absence data with local file",
+        "description": "",
+        "id": "practical-test;compare-absence-data-with-local-file",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 34,
+            "name": "I have navigated to the AUT",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 35,
+            "name": "I log in with valid credentials",
+            "match": {},
+            "rows": [
+              {
+                "cells": [
+                  "EMAIL",
+                  "PASSWORD"
+                ]
+              },
+              {
+                "cells": [
+                  "njF83mf@jN7p.z7B",
+                  "3K4Mq*S%1ejqV0iu^glcK\u0026o$m4q^D157"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 38,
+            "name": "I navigate to the Absence Management page",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 39,
+            "name": "I use \"Y\" as the search criteria",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 40,
+            "name": "I perform the search",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 41,
+            "name": "I generate the CSV containing the search results",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 42,
+            "name": "I download the spreadsheet to a predefined directory on the local machine",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 43,
+            "name": "The data in the spreadsheet should be consistent with the data displayed on screen",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@practical"
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": []
+      },
+      {
+        "line": 46,
+        "name": "Update the logged-in-user\u0027s details",
+        "description": "",
+        "id": "practical-test;update-the-logged-in-user-s-details",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 47,
+            "name": "I have navigated to the AUT",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 48,
+            "name": "I log in with valid credentials",
+            "match": {},
+            "rows": [
+              {
+                "cells": [
+                  "EMAIL",
+                  "PASSWORD"
+                ]
+              },
+              {
+                "cells": [
+                  "njF83mf@jN7p.z7B",
+                  "3K4Mq*S%1ejqV0iu^glcK\u0026o$m4q^D157"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 51,
+            "name": "I navigate to the Logged-In-User\u0027s Profile page",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 52,
+            "name": "I update the work address details",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 53,
+            "name": "I update the contact options",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 54,
+            "name": "I confirm that an error occurs upon attempting to save without populating the required fields",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 55,
+            "name": "I save the changes",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 56,
+            "name": "My changes should have successfully applied",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@practical"
+          }
+        ]
+      }
+    ],
+    "name": "Practical Test",
+    "description": "\tIn order to test the AUT\n\tAs a registered user\n\tI want to run the following tests",
+    "id": "practical-test",
+    "keyword": "Feature",
+    "uri": "src/test/resources/practical-test-.feature",
+    "tags": []
+  }
+]
