@@ -24,7 +24,7 @@ import org.junit.runner.RunWith;
         glue = {"step_definitions"},
         //dry run - to generate step definitions automatically
         //you will see them in the console output
-        dryRun = true
+        dryRun = false
 )
 
 public class CukesRunner1 {

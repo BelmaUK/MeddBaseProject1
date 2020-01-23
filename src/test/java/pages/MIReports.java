@@ -8,14 +8,12 @@ import utilities.Driver;
 import java.util.ArrayList;
 import java.util.List;
 
-import static utilities.BrowserUtils.waitForClickablility;
-import static utilities.BrowserUtils.waitForVisibility;
+import static utilities.BrowserUtils.*;
 
 public class MIReports {
 
     public MIReports() {
         PageFactory.initElements(Driver.getDriver(), this);
-
 
     }
 
@@ -23,10 +21,8 @@ public class MIReports {
     @FindBy(xpath = "//span[text()='MI reports']")
     public WebElement MIReportsElement;
 
-
     @FindBy(xpath = "//td[text()='Absence Overview']")
     public WebElement AbsenceOverviewElement;
-
 
     @FindBy(xpath = "//input[@name='date'][1]")
     public WebElement StartDateElement;
@@ -52,13 +48,14 @@ public class MIReports {
 
 
     public void setStartDateandEndDate(String StartDate,String EndDate) {
-        waitForVisibility(StartDateElement,30);
+        waitForVisibility(StartDateElement,5);
         StartDateElement.clear();
-        waitForVisibility(EndDateElement,30);
+        waitPlease(10);
         EndDateElement.clear();
-        waitForClickablility(StartDateElement, 30);
+        waitPlease(10);
+        waitForClickablility(StartDateElement, 5);
         StartDateElement.sendKeys(StartDate, Keys.ENTER);
-        waitForClickablility(EndDateElement,30);
+        waitForClickablility(EndDateElement,5);
         EndDateElement.sendKeys(EndDate,Keys.ENTER);
     }
 
@@ -67,8 +64,6 @@ public class MIReports {
 
         UpdateDataElement.click();
     }
-
-
 
 
 

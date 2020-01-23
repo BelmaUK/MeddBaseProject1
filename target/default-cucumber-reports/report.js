@@ -13,12 +13,12 @@ formatter.before({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Update the logged-in-user\u0027s details",
+  "name": "Assert management information report results",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@practical3"
+      "name": "@practical1"
     }
   ]
 });
@@ -57,65 +57,71 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I navigate to the Logged-In-User\u0027s Profile page",
+  "name": "I navigate to the Absence Overview page",
   "keyword": "When "
 });
 formatter.match({
-  "location": "PracticeTestStepDefinitions.i_navigate_to_the_Logged_In_User_s_Profile_page()"
+  "location": "PracticeTestStepDefinitions.i_navigate_to_the_Absence_Overview_page()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I update the work address details",
+  "name": "I set the time window",
+  "rows": [
+    {
+      "cells": [
+        "START DATE",
+        "END DATE"
+      ]
+    },
+    {
+      "cells": [
+        "30/04/2019",
+        "30/10/2019"
+      ]
+    }
+  ],
   "keyword": "And "
 });
 formatter.match({
-  "location": "PracticeTestStepDefinitions.i_update_the_work_address_details()"
+  "location": "PracticeTestStepDefinitions.i_set_the_time_window(String,String\u003e\u003e)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I update the contact options",
+  "name": "I update the data",
   "keyword": "And "
 });
 formatter.match({
-  "location": "PracticeTestStepDefinitions.i_update_the_contact_options()"
+  "location": "PracticeTestStepDefinitions.i_update_the_data()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I confirm that an error occurs upon attempting to save without populating the required fields",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "PracticeTestStepDefinitions.i_confirm_that_an_error_occurs_upon_attempting_to_save_without_populating_the_required_fields()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I save the changes",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "PracticeTestStepDefinitions.i_save_the_changes()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "My changes should have successfully applied",
+  "name": "The employee surnames on the first 5 pages should include \"Streater\", \"Acland\" and \"De la Yglesia\", but not \"Graddon\" or \"Shoobridge\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "PracticeTestStepDefinitions.my_changes_should_have_successfully_applied()"
+  "location": "PracticeTestStepDefinitions.the_employee_surnames_on_the_first_pages_should_include_and_but_not_or(Integer,String,String,String,String,String)"
 });
 formatter.result({
-  "status": "passed"
+  "error_message": "java.lang.AssertionError\n\tat org.junit.Assert.fail(Assert.java:86)\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\tat org.junit.Assert.assertTrue(Assert.java:52)\n\tat step_definitions.PracticeTestStepDefinitions.the_employee_surnames_on_the_first_pages_should_include_and_but_not_or(PracticeTestStepDefinitions.java:55)\n\tat ✽.The employee surnames on the first 5 pages should include \"Streater\", \"Acland\" and \"De la Yglesia\", but not \"Graddon\" or \"Shoobridge\"(src/test/resources/practical-test-.feature:29)\n",
+  "status": "failed"
 });
+formatter.step({
+  "name": "Print the number of occurrences to the browser console",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "PracticeTestStepDefinitions.print_the_number_of_occurrences_to_the_browser_console()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.embedding("image/png", "embedded0.png");
 formatter.after({
   "status": "passed"
 });
