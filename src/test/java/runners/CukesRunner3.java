@@ -26,7 +26,7 @@ import org.junit.runner.RunWith;
         tags = {"@practical3"},
         //dry run - to generate step definitions automatically
         //you will see them in the console output
-        dryRun = true
+        dryRun = false
 
 )
 

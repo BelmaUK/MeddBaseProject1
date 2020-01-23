@@ -97,8 +97,34 @@ public class PracticeTestStepDefinitions  {
      pages.AbsentMPage().HeaderList();
     }
 
+    @When("I navigate to the Logged-In-User's Profile page")
+    public void i_navigate_to_the_Logged_In_User_s_Profile_page() {
+    pages.AvatarPage().Profil();
+    }
 
+    @When("I update the work address details")
+    public void i_update_the_work_address_details() {
+    pages.AvatarPage().address();
+    }
 
+    @When("I update the contact options")
+    public void i_update_the_contact_options() {
+        pages.AvatarPage().ContactOption();
+    }
 
+    @When("I confirm that an error occurs upon attempting to save without populating the required fields")
+    public void i_confirm_that_an_error_occurs_upon_attempting_to_save_without_populating_the_required_fields() {
+    pages.AvatarPage().ErrorMessage();
+    }
+
+    @When("I save the changes")
+    public void i_save_the_changes() {
+      pages.AvatarPage().SuccessSave();
+    }
+
+    @Then("My changes should have successfully applied")
+    public void my_changes_should_have_successfully_applied() {
+        pages.AvatarPage().SuccessMessage();
+    }
 
     }

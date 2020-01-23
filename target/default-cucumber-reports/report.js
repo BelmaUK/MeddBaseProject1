@@ -13,12 +13,12 @@ formatter.before({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Compare absence data with local file",
+  "name": "Update the logged-in-user\u0027s details",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@practical2"
+      "name": "@practical3"
     }
   ]
 });
@@ -57,61 +57,61 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I navigate to the Absence Management page",
+  "name": "I navigate to the Logged-In-User\u0027s Profile page",
   "keyword": "When "
 });
 formatter.match({
-  "location": "PracticeTestStepDefinitions.i_navigate_to_the_Absence_Management_page()"
+  "location": "PracticeTestStepDefinitions.i_navigate_to_the_Logged_In_User_s_Profile_page()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I use \"Y\" as the search criteria",
+  "name": "I update the work address details",
   "keyword": "And "
 });
 formatter.match({
-  "location": "PracticeTestStepDefinitions.i_use_as_the_search_criteria(String)"
+  "location": "PracticeTestStepDefinitions.i_update_the_work_address_details()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I perform the search",
+  "name": "I update the contact options",
   "keyword": "And "
 });
 formatter.match({
-  "location": "PracticeTestStepDefinitions.i_perform_the_search()"
+  "location": "PracticeTestStepDefinitions.i_update_the_contact_options()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I generate the CSV containing the search results",
+  "name": "I confirm that an error occurs upon attempting to save without populating the required fields",
   "keyword": "And "
 });
 formatter.match({
-  "location": "PracticeTestStepDefinitions.i_generate_the_CSV_containing_the_search_results()"
+  "location": "PracticeTestStepDefinitions.i_confirm_that_an_error_occurs_upon_attempting_to_save_without_populating_the_required_fields()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I download the spreadsheet to a predefined directory on the local machine",
-  "keyword": "When "
+  "name": "I save the changes",
+  "keyword": "And "
 });
 formatter.match({
-  "location": "PracticeTestStepDefinitions.i_download_the_spreadsheet_to_a_predefined_directory_on_the_local_machine()"
+  "location": "PracticeTestStepDefinitions.i_save_the_changes()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "The data in the spreadsheet should be consistent with the data displayed on screen *",
+  "name": "My changes should have successfully applied",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "PracticeTestStepDefinitions.the_data_in_the_spreadsheet_should_be_consistent_with_the_data_displayed_on_screen()"
+  "location": "PracticeTestStepDefinitions.my_changes_should_have_successfully_applied()"
 });
 formatter.result({
   "status": "passed"
