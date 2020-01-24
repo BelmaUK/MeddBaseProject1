@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
 
         plugin = {
-
+                "json:target/cucumber1.json",
                 "html:target/default-cucumber-reports",
         },
         features = {"src/test/resources/practical-test-.feature" //to specify where are the features

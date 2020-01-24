@@ -6,9 +6,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.ArrayList;
 import java.util.List;
 
-import static utilities.BrowserUtils.*;
+import static utilities.BrowserUtils.waitForVisibility;
+import static utilities.BrowserUtils.waitPlease;
 
 public class AbsentMPage {
 
@@ -16,6 +18,7 @@ public class AbsentMPage {
        public AbsentMPage() {
             PageFactory.initElements(Driver.getDriver(), this);
        }
+
 
 
     @FindBy(xpath = "//li[@ng-show='CanViewAbsences']")
@@ -42,6 +45,21 @@ public class AbsentMPage {
     @FindBy(xpath = "//table //thead// th")
     public List<WebElement> TableHeaders;
 
+    @FindBy(xpath = "//table //thead// td")
+    public List<WebElement> TableData;
+
+
+      @FindBy(xpath="//table//tbody//tr")
+      public List<WebElement> TableRowElement;
+
+    @FindBy(xpath = "//span[text()='»']")
+    public WebElement NextLocator;
+
+    List<WebElement>TotatlWebElement=new ArrayList<>();
+
+    List<String> AbsenceTableList = new ArrayList<>();
+
+    int TableRowCount;
 
     public void AbsenceManagementDasboard() {
 
@@ -53,6 +71,7 @@ public class AbsentMPage {
 
      }
     public void Search() {
+        waitPlease(2);
         SerachElemet.click();
 
     }
@@ -64,14 +83,55 @@ public class AbsentMPage {
 
     public void DownloadFile (){
     waitForVisibility(DownloadingElement,100);
+    waitPlease(10);
         DownloadingElement.click();
     }
 
    public void HeaderList() {
-        for(WebElement header: TableHeaders){
-            System.out.println(header.getText());
-        }
-
+       for (WebElement header : TableHeaders) {
+           waitPlease(10);
+           System.out.println(header.getText());
+       }
    }
 
-}
+       public void AbsenceTable() {
+
+           for (WebElement header : TableHeaders) {
+               AbsenceTableList.add(header.getText());
+           }
+           for (WebElement data : TableData) {
+               AbsenceTableList.add(data.getText());
+           }
+
+           if (NextLocator.isDisplayed()) {
+               NextLocator.click();
+               waitPlease(10);
+               for (WebElement data : TableData) {
+                   AbsenceTableList.add(data.getText());
+               }
+
+           }
+           System.out.println(AbsenceTableList.toString());
+
+       }
+
+            public int RowNumber () {
+
+                while(NextLocator.isDisplayed()){
+                   TableRowCount += TableRowElement.size();
+                   while(NextLocator.isDisplayed()){
+                   NextLocator.click();
+                   waitPlease(10);}
+               } ;
+
+                return TableRowCount;
+                }
+
+        }
+
+
+
+
+
+
+

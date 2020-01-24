@@ -1,4 +1,5 @@
 package pages;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -36,27 +37,28 @@ public class MIReports {
     @FindBy(xpath = "//td[@class='ng-scope'][17]")
     public List<WebElement> LastNameList;
 
+    //  @FindBy(xpath = "//span[text()='" + page + "']")
+    //  public List<WebElement> PageList;
 
 
-    public void  NavigateAbsenceOverviewPage() {
-        waitForVisibility(MIReportsElement,5);
+    public void NavigateAbsenceOverviewPage() {
+        waitForVisibility(MIReportsElement, 5);
         MIReportsElement.click();
-        waitForVisibility(  AbsenceOverviewElement,5);
+        waitForVisibility(AbsenceOverviewElement, 5);
         AbsenceOverviewElement.click();
-
     }
 
 
-    public void setStartDateandEndDate(String StartDate,String EndDate) {
-        waitForVisibility(StartDateElement,5);
+    public void setStartDateandEndDate(String StartDate, String EndDate) {
+        waitForVisibility(StartDateElement, 5);
         StartDateElement.clear();
         waitPlease(10);
         EndDateElement.clear();
         waitPlease(10);
         waitForClickablility(StartDateElement, 5);
         StartDateElement.sendKeys(StartDate, Keys.ENTER);
-        waitForClickablility(EndDateElement,5);
-        EndDateElement.sendKeys(EndDate,Keys.ENTER);
+        waitForClickablility(EndDateElement, 5);
+        EndDateElement.sendKeys(EndDate, Keys.ENTER);
     }
 
 
@@ -66,16 +68,23 @@ public class MIReports {
     }
 
 
+    public List<String> getLastNameText(int page) {
 
-    public List<String> getLastNameText() {
         List<String> LastNameTextList = new ArrayList<>();
-        for (WebElement LastName : LastNameList) {
-            LastNameTextList.add(LastName.getText());
+        for (int i = 2; i <= page; i++) {
+            waitPlease(2);
+            for (WebElement LastName : LastNameList) {
+                LastNameTextList.add(LastName.getText());
+            }
+            waitPlease(2);
+            String locator = "//span[text()='" + i + "'] ";
+            WebElement PageLocator = Driver.getDriver().findElement(By.xpath(locator));
+            waitPlease(2);
+            PageLocator.click();
+
         }
         return LastNameTextList;
     }
-
-
-
-
 }
+
+

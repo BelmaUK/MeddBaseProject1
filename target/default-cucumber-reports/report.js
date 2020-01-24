@@ -13,12 +13,12 @@ formatter.before({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Assert management information report results",
+  "name": "Compare absence data with local file",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@practical1"
+      "name": "@practical2"
     }
   ]
 });
@@ -57,69 +57,65 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I navigate to the Absence Overview page",
+  "name": "I navigate to the Absence Management page",
   "keyword": "When "
 });
 formatter.match({
-  "location": "PracticeTestStepDefinitions.i_navigate_to_the_Absence_Overview_page()"
+  "location": "PracticeTestStepDefinitions.i_navigate_to_the_Absence_Management_page()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I set the time window",
-  "rows": [
-    {
-      "cells": [
-        "START DATE",
-        "END DATE"
-      ]
-    },
-    {
-      "cells": [
-        "30/04/2019",
-        "30/10/2019"
-      ]
-    }
-  ],
+  "name": "I use \"Y\" as the search criteria",
   "keyword": "And "
 });
 formatter.match({
-  "location": "PracticeTestStepDefinitions.i_set_the_time_window(String,String\u003e\u003e)"
+  "location": "PracticeTestStepDefinitions.i_use_as_the_search_criteria(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I update the data",
+  "name": "I perform the search",
   "keyword": "And "
 });
 formatter.match({
-  "location": "PracticeTestStepDefinitions.i_update_the_data()"
+  "location": "PracticeTestStepDefinitions.i_perform_the_search()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "The employee surnames on the first 5 pages should include \"Streater\", \"Acland\" and \"De la Yglesia\", but not \"Graddon\" or \"Shoobridge\"",
+  "name": "I generate the CSV containing the search results",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "PracticeTestStepDefinitions.i_generate_the_CSV_containing_the_search_results()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I download the spreadsheet to a predefined directory on the local machine",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "PracticeTestStepDefinitions.i_download_the_spreadsheet_to_a_predefined_directory_on_the_local_machine()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "The data in the spreadsheet should be consistent with the data displayed on screen *",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "PracticeTestStepDefinitions.the_employee_surnames_on_the_first_pages_should_include_and_but_not_or(Integer,String,String,String,String,String)"
+  "location": "PracticeTestStepDefinitions.the_data_in_the_spreadsheet_should_be_consistent_with_the_data_displayed_on_screen()"
 });
 formatter.result({
-  "error_message": "java.lang.AssertionError\n\tat org.junit.Assert.fail(Assert.java:86)\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\tat org.junit.Assert.assertTrue(Assert.java:52)\n\tat step_definitions.PracticeTestStepDefinitions.the_employee_surnames_on_the_first_pages_should_include_and_but_not_or(PracticeTestStepDefinitions.java:55)\n\tat ✽.The employee surnames on the first 5 pages should include \"Streater\", \"Acland\" and \"De la Yglesia\", but not \"Graddon\" or \"Shoobridge\"(src/test/resources/practical-test-.feature:29)\n",
+  "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//span[text()\u003d\u0027»\u0027]\"}\n  (Session info: chrome\u003d79.0.3945.130)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027BELMAs-MacBook-Pro.local\u0027, ip: \u0027fe80:0:0:0:e1:2ecc:ddfb:57f1%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.14.6\u0027, java.version: \u002712.0.2\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /var/folders/b4/tvtzb15n5nx...}, goog:chromeOptions: {debuggerAddress: localhost:54568}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 971d9b3e9ebbd7cf2371baad9e94e79b\n*** Element info: {Using\u003dxpath, value\u003d//span[text()\u003d\u0027»\u0027]}\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\n\tat com.sun.proxy.$Proxy18.isDisplayed(Unknown Source)\n\tat pages.AbsentMPage.RowNumber(AbsentMPage.java:122)\n\tat step_definitions.PracticeTestStepDefinitions.the_data_in_the_spreadsheet_should_be_consistent_with_the_data_displayed_on_screen(PracticeTestStepDefinitions.java:105)\n\tat ✽.The data in the spreadsheet should be consistent with the data displayed on screen *(src/test/resources/practical-test-.feature:45)\n",
   "status": "failed"
-});
-formatter.step({
-  "name": "Print the number of occurrences to the browser console",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "PracticeTestStepDefinitions.print_the_number_of_occurrences_to_the_browser_console()"
-});
-formatter.result({
-  "status": "skipped"
 });
 formatter.embedding("image/png", "embedded0.png");
 formatter.after({

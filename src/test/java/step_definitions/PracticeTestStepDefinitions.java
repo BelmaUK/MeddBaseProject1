@@ -5,10 +5,13 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
-import utilities.*;
+import utilities.Pages;
 
 import java.util.List;
 import java.util.Map;
+
+import static utilities.BrowserUtils.waitPlease;
+import static utilities.ExcelUtilities.ReadCVSFile;
 
 public class PracticeTestStepDefinitions  {
 
@@ -50,20 +53,21 @@ public class PracticeTestStepDefinitions  {
 
     @Then("The employee surnames on the first {int} pages should include {string}, {string} and {string}, but not {string} or {string}")
     public void the_employee_surnames_on_the_first_pages_should_include_and_but_not_or(Integer int1, String string, String string2, String string3, String string4, String string5) {
+        List<String> CheckNameTextList =pages.MIReports().getLastNameText(int1);
 
 
-        Assert.assertTrue(pages.MIReports().getLastNameText().contains(string));
-        Assert.assertTrue(pages.MIReports().getLastNameText().contains(string2));
-        Assert.assertTrue(pages.MIReports().getLastNameText().contains(string3));
-        Assert.assertFalse(pages.MIReports().getLastNameText().contains(string4));
-        Assert.assertFalse(pages.MIReports().getLastNameText().contains(string5));
+        Assert.assertTrue(CheckNameTextList.contains(string));
+        Assert.assertTrue(CheckNameTextList.contains(string2));
+        Assert.assertTrue(CheckNameTextList.contains(string3));
+        Assert.assertFalse(CheckNameTextList.contains(string4));
+        Assert.assertFalse(CheckNameTextList.contains(string5));
 
 
     }
 
     @Then("Print the number of occurrences to the browser console")
     public void print_the_number_of_occurrences_to_the_browser_console() {
-        System.out.println(pages.MIReports().getLastNameText());
+        System.out.println(pages.MIReports().getLastNameText(5));
 
 
     }
@@ -80,6 +84,7 @@ public class PracticeTestStepDefinitions  {
 
     @When("I perform the search")
     public void i_perform_the_search() {
+        waitPlease(2);
         pages.AbsentMPage().Search();
     }
 
@@ -87,14 +92,20 @@ public class PracticeTestStepDefinitions  {
     public void i_generate_the_CSV_containing_the_search_results() {
         pages.AbsentMPage().CSVDataReport();
     }
+
     @When("I download the spreadsheet to a predefined directory on the local machine")
     public void i_download_the_spreadsheet_to_a_predefined_directory_on_the_local_machine() {
         pages.AbsentMPage().DownloadFile();
     }
 
     @Then("The data in the spreadsheet should be consistent with the data displayed on screen *")
-    public void the_data_in_the_spreadsheet_should_be_consistent_with_the_data_displayed_on_screen() {
-     pages.AbsentMPage().HeaderList();
+    public void the_data_in_the_spreadsheet_should_be_consistent_with_the_data_displayed_on_screen() throws Exception {
+        waitPlease(10);
+       int PageNumber= ReadCVSFile("/Users/belmaalsankurt/Downloads/absences.csv");
+       int FinalTableRowCount=pages.AbsentMPage().RowNumber()+1;
+        System.out.println(FinalTableRowCount);
+        System.out.println(PageNumber);
+       // Assert.assertTrue( CVSFile.toString().contains("Employee"));
     }
 
     @When("I navigate to the Logged-In-User's Profile page")
