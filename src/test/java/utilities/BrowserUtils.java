@@ -486,5 +486,13 @@ public class BrowserUtils {
                 until(ExpectedConditions.stalenessOf(Driver.getDriver().findElement(by)));
     }
 
+    public static void scroll(WebElement Locator) {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver(); ;
+        js.executeScript("arguments[0].scrollIntoView();",Locator);
+            waitPlease(3);
+        }
 
-}
+    }
+
+
+

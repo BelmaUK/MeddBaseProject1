@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import static utilities.BrowserUtils.scroll;
 import static utilities.BrowserUtils.waitPlease;
 
 public class AvatarPage {
@@ -46,6 +47,12 @@ public class AvatarPage {
     @FindBy(xpath = "//div[@ng-if='showAlert']")
     public WebElement SuceessMessageElement;
 
+
+    @FindBy(xpath = "//h1[text()='My Account']")
+    public WebElement MyAccountElement;
+
+
+
     public void Profil(){
         waitPlease(2);
         ProfilElement.click();
@@ -79,6 +86,7 @@ public class AvatarPage {
 
 
     public void ErrorMessage(){
+        scroll(MyAccountElement);
         PasswordElement.clear();
         waitPlease(10);
         SaveChangesElement.click();
@@ -91,6 +99,7 @@ public class AvatarPage {
 
     public void SuccessSave() {
         PasswordElement.sendKeys("3K4Mq*S%1ejqV0iu^glcK&o$m4q^D157");
+        waitPlease(10);
         SaveChangesElement.click();
     }
 
