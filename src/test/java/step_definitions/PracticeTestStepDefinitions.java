@@ -102,10 +102,11 @@ public class PracticeTestStepDefinitions  {
     public void the_data_in_the_spreadsheet_should_be_consistent_with_the_data_displayed_on_screen() throws Exception {
         waitPlease(10);
        int PageNumber= ReadCVSFile("/Users/belmaalsankurt/Downloads/absences.csv");
-       int FinalTableRowCount=pages.AbsentMPage().RowNumber()+1;
-        System.out.println(FinalTableRowCount);
         System.out.println(PageNumber);
-       // Assert.assertTrue( CVSFile.toString().contains("Employee"));
+        int TableNumber =pages.AbsentMPage().RowNumber()+1;
+        System.out.println(TableNumber);
+       Assert.assertEquals(PageNumber,TableNumber);
+
     }
 
     @When("I navigate to the Logged-In-User's Profile page")

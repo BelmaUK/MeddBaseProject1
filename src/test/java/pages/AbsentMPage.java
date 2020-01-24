@@ -1,6 +1,7 @@
 package pages;
 
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -9,16 +10,14 @@ import utilities.Driver;
 import java.util.ArrayList;
 import java.util.List;
 
-import static utilities.BrowserUtils.waitForVisibility;
-import static utilities.BrowserUtils.waitPlease;
+import static utilities.BrowserUtils.*;
 
 public class AbsentMPage {
 
 
-       public AbsentMPage() {
-            PageFactory.initElements(Driver.getDriver(), this);
-       }
-
+    public AbsentMPage() {
+        PageFactory.initElements(Driver.getDriver(), this);
+    }
 
 
     @FindBy(xpath = "//li[@ng-show='CanViewAbsences']")
@@ -29,16 +28,16 @@ public class AbsentMPage {
     public WebElement AbsenceMPSearchByNameElement;
 
 
-   @FindBy(xpath="//button[@type=\'submit\']")
-   public WebElement SerachElemet;
+    @FindBy(xpath = "//button[@type=\'submit\']")
+    public WebElement SerachElemet;
 
-    @FindBy(xpath="//button[text()=\'Generate CSV\']")
+    @FindBy(xpath = "//button[text()=\'Generate CSV\']")
     public WebElement GenerateCSVElement;
 
-    @FindBy(xpath="//div[@class=\'loading-content\']")
+    @FindBy(xpath = "//div[@class=\'loading-content\']")
     public WebElement LoodingElement;
 
-    @FindBy(xpath="//button[text()='Download CSV']")
+    @FindBy(xpath = "//button[text()='Download CSV']")
     public WebElement DownloadingElement;
 
 
@@ -49,13 +48,13 @@ public class AbsentMPage {
     public List<WebElement> TableData;
 
 
-      @FindBy(xpath="//table//tbody//tr")
-      public List<WebElement> TableRowElement;
+    @FindBy(xpath = "//table//tbody//tr")
+    public List<WebElement> TableRowElement;
 
     @FindBy(xpath = "//span[text()='»']")
     public WebElement NextLocator;
 
-    List<WebElement>TotatlWebElement=new ArrayList<>();
+    List<WebElement> TotatlWebElement = new ArrayList<>();
 
     List<String> AbsenceTableList = new ArrayList<>();
 
@@ -63,13 +62,14 @@ public class AbsentMPage {
 
     public void AbsenceManagementDasboard() {
 
-           AbsenceManagementDasboardElement.click();
-       }
+        AbsenceManagementDasboardElement.click();
+    }
 
-     public void SearchByNameAndEmail(String name ) {
-         AbsenceMPSearchByNameElement.sendKeys(name);
+    public void SearchByNameAndEmail(String name) {
+        AbsenceMPSearchByNameElement.sendKeys(name);
 
-     }
+    }
+
     public void Search() {
         waitPlease(2);
         SerachElemet.click();
@@ -77,58 +77,61 @@ public class AbsentMPage {
     }
 
     public void CSVDataReport() {
-    waitPlease(20);
+        waitPlease(20);
         GenerateCSVElement.click();
     }
 
-    public void DownloadFile (){
-    waitForVisibility(DownloadingElement,100);
-    waitPlease(10);
+    public void DownloadFile() {
+        waitForVisibility(DownloadingElement, 100);
+        waitPlease(10);
         DownloadingElement.click();
     }
 
-   public void HeaderList() {
-       for (WebElement header : TableHeaders) {
-           waitPlease(10);
-           System.out.println(header.getText());
-       }
-   }
+    public void HeaderList() {
+        for (WebElement header : TableHeaders) {
+            waitPlease(10);
+            System.out.println(header.getText());
+        }
+    }
 
-       public void AbsenceTable() {
+    public void AbsenceTable() {
 
-           for (WebElement header : TableHeaders) {
-               AbsenceTableList.add(header.getText());
-           }
-           for (WebElement data : TableData) {
-               AbsenceTableList.add(data.getText());
-           }
-
-           if (NextLocator.isDisplayed()) {
-               NextLocator.click();
-               waitPlease(10);
-               for (WebElement data : TableData) {
-                   AbsenceTableList.add(data.getText());
-               }
-
-           }
-           System.out.println(AbsenceTableList.toString());
-
-       }
-
-            public int RowNumber () {
-
-                while(NextLocator.isDisplayed()){
-                   TableRowCount += TableRowElement.size();
-                   while(NextLocator.isDisplayed()){
-                   NextLocator.click();
-                   waitPlease(10);}
-               } ;
-
-                return TableRowCount;
-                }
-
+        for (WebElement header : TableHeaders) {
+            AbsenceTableList.add(header.getText());
+        }
+        for (WebElement data : TableData) {
+            AbsenceTableList.add(data.getText());
         }
 
+        if (NextLocator.isDisplayed()) {
+            NextLocator.click();
+            waitPlease(10);
+            for (WebElement data : TableData) {
+                AbsenceTableList.add(data.getText());
+            }
+
+        }
+        System.out.println(AbsenceTableList.toString());
+
+    }
+
+    public int RowNumber() {
+        Boolean hasNext=true;
+        try {
+              while(hasNext)   {
+            TableRowCount += TableRowElement.size();
+                  waitPlease(3);
+               NextLocator.click();
+               hasNext=true; }
+
+        } catch (NoSuchElementException e) {
+
+        }
+        return TableRowCount;
+
+    }
+
+}
 
 
 
