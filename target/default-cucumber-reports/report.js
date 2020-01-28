@@ -13,12 +13,12 @@ formatter.before({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Update the logged-in-user\u0027s details",
+  "name": "Compare absence data with local file",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@practical3"
+      "name": "@practical2"
     }
   ]
 });
@@ -57,65 +57,82 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I navigate to the Logged-In-User\u0027s Profile page",
+  "name": "I navigate to the Absence Management page",
   "keyword": "When "
 });
 formatter.match({
-  "location": "PracticeTestStepDefinitions.i_navigate_to_the_Logged_In_User_s_Profile_page()"
+  "location": "PracticeTestStepDefinitions.i_navigate_to_the_Absence_Management_page()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I update the work address details",
+  "name": "I use \"Y\" as the search criteria",
   "keyword": "And "
 });
 formatter.match({
-  "location": "PracticeTestStepDefinitions.i_update_the_work_address_details()"
+  "location": "PracticeTestStepDefinitions.i_use_as_the_search_criteria(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I update the contact options",
+  "name": "I perform the search",
   "keyword": "And "
 });
 formatter.match({
-  "location": "PracticeTestStepDefinitions.i_update_the_contact_options()"
+  "location": "PracticeTestStepDefinitions.i_perform_the_search()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I confirm that an error occurs upon attempting to save without populating the required fields",
+  "name": "I generate the CSV containing the search results",
   "keyword": "And "
 });
 formatter.match({
-  "location": "PracticeTestStepDefinitions.i_confirm_that_an_error_occurs_upon_attempting_to_save_without_populating_the_required_fields()"
+  "location": "PracticeTestStepDefinitions.i_generate_the_CSV_containing_the_search_results()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I save the changes",
-  "keyword": "And "
+  "name": "I download the spreadsheet to a predefined directory on the local machine",
+  "keyword": "When "
 });
 formatter.match({
-  "location": "PracticeTestStepDefinitions.i_save_the_changes()"
+  "location": "PracticeTestStepDefinitions.i_download_the_spreadsheet_to_a_predefined_directory_on_the_local_machine()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "My changes should have successfully applied",
+  "name": "The data in the spreadsheet should be consistent with the data displayed on screen *",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "PracticeTestStepDefinitions.my_changes_should_have_successfully_applied()"
+  "location": "PracticeTestStepDefinitions.the_data_in_the_spreadsheet_should_be_consistent_with_the_data_displayed_on_screen()"
 });
 formatter.result({
   "status": "passed"
 });
+formatter.after({
+  "status": "passed"
+});
+});irst 5 pages should include \"Streater\", \"Acland\" and \"De la Yglesia\", but not \"Graddon\" or \"Shoobridge\"(src/test/resources/practical-test-.feature:29)\n",
+  "status": "failed"
+});
+formatter.step({
+  "name": "Print the number of occurrences to the browser console",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "PracticeTestStepDefinitions.print_the_number_of_occurrences_to_the_browser_console()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.embedding("image/png", "embedded0.png");
 formatter.after({
   "status": "passed"
 });

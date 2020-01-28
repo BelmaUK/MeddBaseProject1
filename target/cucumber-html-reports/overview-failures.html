@@ -78,7 +78,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>Cucumber HTML Reports</td>
               <td>1</td>
-            <td>28 Jan 2020, 20:46</td>
+            <td>28 Jan 2020, 21:17</td>
     </tr>
   </tbody>
 </table>
@@ -118,24 +118,24 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_1_214656654.html">Practical Test</a>
+      <a href="report-feature_2_214656654.html">Practical Test</a>
     </div>
   
   
 <div class="tags indention">
       <b>Tags:</b>
-           <a href="report-tag_1024118013.html">@practical3</a>
+           <a href="report-tag_1024118011.html">@practical1</a>
       </div>
 
   
-  <span class="lead-duration duration">18.759</span>
+  <span class="lead-duration duration">50.691</span>
 
 
     <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
     
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Update the logged-in-user's details</span>
+  <span class="name">Assert management information report results</span>
   
 
        <i class="chevron fa fa-fw"></i>
@@ -165,7 +165,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
                           <span class="location name">Hook.setup(Scenario)</span>
                         
-  <span class="lead-duration duration">2.400</span>
+  <span class="lead-duration duration">1.850</span>
 
           </div>
 
@@ -202,7 +202,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">I have navigated to the AUT</span>
   
-  <span class="lead-duration duration">1.613</span>
+  <span class="lead-duration duration">1.336</span>
 
 </div>
 
@@ -227,7 +227,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">I log in with valid credentials</span>
   
-  <span class="lead-duration duration">1.211</span>
+  <span class="lead-duration duration">1.184</span>
 
 </div>
 
@@ -260,9 +260,9 @@ $(document).ready(function() {
         
 <div class="brief passed">
   <span class="keyword indention">When</span>
-  <span class="name">I navigate to the Logged-In-User's Profile page</span>
+  <span class="name">I navigate to the Absence Overview page</span>
   
-  <span class="lead-duration duration">4.196</span>
+  <span class="lead-duration duration">2.068</span>
 
 </div>
 
@@ -285,9 +285,44 @@ $(document).ready(function() {
         
 <div class="brief passed">
   <span class="keyword indention">And</span>
-  <span class="name">I update the work address details</span>
+  <span class="name">I set the time window</span>
   
-  <span class="lead-duration duration">0.161</span>
+  <span class="lead-duration duration">21.227</span>
+
+</div>
+
+        
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>START DATE</td>
+                                  <td>END DATE</td>
+                              </tr>
+                          <tr>
+                                  <td>30/04/2019</td>
+                                  <td>30/10/2019</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+        
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I update the data</span>
+  
+  <span class="lead-duration duration">0.112</span>
 
 </div>
 
@@ -309,10 +344,10 @@ $(document).ready(function() {
           <div class="step">
         
 <div class="brief failed">
-  <span class="keyword indention">And</span>
-  <span class="name">I update the contact options</span>
+  <span class="keyword indention">Then</span>
+  <span class="name">The employee surnames on the first <span class="argument">5</span> pages should include <span class="argument">&quot;Streater&quot;</span>, <span class="argument">&quot;Acland&quot;</span> and <span class="argument">&quot;De la Yglesia&quot;</span>, but not <span class="argument">&quot;Graddon&quot;</span> or <span class="argument">&quot;Shoobridge&quot;</span></span>
   
-  <span class="lead-duration duration">11.577</span>
+  <span class="lead-duration duration">24.762</span>
 
 </div>
 
@@ -323,38 +358,15 @@ $(document).ready(function() {
   <div class="inner-level">
     <div class="message indention">
       <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-4">
-          <a>org.openqa.selenium.ElementClickInterceptedException:</a>
+          <a>java.lang.AssertionError</a>
       </div>
       <div id="msg-4" class="collapse collapsable-details  in ">
-        <pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input type=&quot;checkbox&quot; ng-checked=&quot;option.Email&quot; ng-model=&quot;option.Email&quot; class=&quot;ng-pristine ng-untouched ng-valid ng-empty&quot;&gt; is not clickable at point (1371, 6). Other element would receive the click: &lt;div class=&quot;navbar-collapse navbar-collapse-toolbar collapse&quot; id=&quot;site-navbar-collapse&quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=79.0.3945.130)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'BELMAs-MacBook-Pro.local', ip: 'fe80:0:0:0:e1:2ecc:ddfb:57f1%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '12.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /var/folders/b4/tvtzb15n5nx...}, goog:chromeOptions: {debuggerAddress: localhost:58370}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: aca111db47e46b95421d79635788df46
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy18.click(Unknown Source)
-	at pages.AvatarPage.ContactOption(AvatarPage.java:74)
-	at step_definitions.PracticeTestStepDefinitions.i_update_the_contact_options(PracticeTestStepDefinitions.java:124)
-	at &#10045;.I update the contact options(src/test/resources/practical-test-.feature:56)
+        <pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at step_definitions.PracticeTestStepDefinitions.the_employee_surnames_on_the_first_pages_should_include_and_but_not_or(PracticeTestStepDefinitions.java:61)
+	at &#10045;.The employee surnames on the first 5 pages should include &quot;Streater&quot;, &quot;Acland&quot; and &quot;De la Yglesia&quot;, but not &quot;Graddon&quot; or &quot;Shoobridge&quot;(src/test/resources/practical-test-.feature:29)
 </pre>
       </div>
     </div>
@@ -375,57 +387,7 @@ Session ID: aca111db47e46b95421d79635788df46
         
 <div class="brief skipped">
   <span class="keyword indention">And</span>
-  <span class="name">I confirm that an error occurs upon attempting to save without populating the required fields</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-        
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-        
-
-      </div>
-          <div class="step">
-        
-<div class="brief skipped">
-  <span class="keyword indention">And</span>
-  <span class="name">I save the changes</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-        
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-        
-
-      </div>
-          <div class="step">
-        
-<div class="brief skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">My changes should have successfully applied</span>
+  <span class="name">Print the number of occurrences to the browser console</span>
   
   <span class="lead-duration duration">0.000</span>
 
@@ -470,7 +432,7 @@ Session ID: aca111db47e46b95421d79635788df46
             <span class="keyword indention">After</span>
                           <span class="location name">Hook.teardown(Scenario)</span>
                         
-  <span class="lead-duration duration">0.656</span>
+  <span class="lead-duration duration">0.738</span>
 
           </div>
 
@@ -484,385 +446,13 @@ Session ID: aca111db47e46b95421d79635788df46
                     <div class="embedding indention">
         <div data-toggle="collapse" data-target="#embedding-6" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_1916863360.png" download target="_blank">
+      <a href="embeddings/embedding_253039817.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-6" class="collapse collapsable-details">
       <div class="embedding-content">
-        <img src="embeddings/embedding_1916863360.png">
-      </div>
-    </div>
-  </div>
-            </div>
-  
-        </div>
-          </div>
-  </div>
-
-  </div>
-</div>
-
-                      
-<div class="element">
-      <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_2_214656654.html">Practical Test</a>
-    </div>
-  
-  
-<div class="tags indention">
-      <b>Tags:</b>
-           <a href="report-tag_1024118011.html">@practical1</a>
-      </div>
-
-  
-  <span class="lead-duration duration">1:0.153</span>
-
-
-    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-7">
-    
-<div class="brief failed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">Assert management information report results</span>
-  
-
-       <i class="chevron fa fa-fw"></i>
-  </div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-7" class="collapse collapsable-details  in ">
-    
-  <div class="inner-level hooks-element-before">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-8">
-      
-<div class="brief passed">
-  <span class="keyword indention">Hooks</span>
-  <span class="name"></span>
-  
-
-       <i class="chevron fa fa-fw"></i>
-  </div>
-
-    </div>
-
-    <div id="before-8" class="inner-level collapse collapsable-details ">
-              <div class="hook">
-          <div class="brief passed">
-            <span class="keyword indention">Before</span>
-                          <span class="location name">Hook.setup(Scenario)</span>
-                        
-  <span class="lead-duration duration">2.451</span>
-
-          </div>
-
-                      
-
-          
-                    
-
-          
-  
-        </div>
-          </div>
-  </div>
-
-
-    
-<div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-9">
-    
-<div class="brief failed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-  
-
-       <i class="chevron fa fa-fw"></i>
-  </div>
-
-  </div>
-
-  <div id="steps-9" class="inner-level collapse collapsable-details  in ">
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">Given</span>
-  <span class="name">I have navigated to the AUT</span>
-  
-  <span class="lead-duration duration">1.520</span>
-
-</div>
-
-        
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-        
-
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">And</span>
-  <span class="name">I log in with valid credentials</span>
-  
-  <span class="lead-duration duration">0.999</span>
-
-</div>
-
-        
-
-        
-
-
-                  <table class="step-arguments">
-                          <tr>
-                                  <td>EMAIL</td>
-                                  <td>PASSWORD</td>
-                              </tr>
-                          <tr>
-                                  <td>njF83mf@jN7p.z7B</td>
-                                  <td>3K4Mq*S%1ejqV0iu^glcK&amp;o$m4q^D157</td>
-                              </tr>
-                      </table>
-        
-        
-
-        
-
-        
-  
-        
-
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">When</span>
-  <span class="name">I navigate to the Absence Overview page</span>
-  
-  <span class="lead-duration duration">2.550</span>
-
-</div>
-
-        
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-        
-
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">And</span>
-  <span class="name">I set the time window</span>
-  
-  <span class="lead-duration duration">21.029</span>
-
-</div>
-
-        
-
-        
-
-
-                  <table class="step-arguments">
-                          <tr>
-                                  <td>START DATE</td>
-                                  <td>END DATE</td>
-                              </tr>
-                          <tr>
-                                  <td>30/04/2019</td>
-                                  <td>30/10/2019</td>
-                              </tr>
-                      </table>
-        
-        
-
-        
-
-        
-  
-        
-
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">And</span>
-  <span class="name">I update the data</span>
-  
-  <span class="lead-duration duration">0.121</span>
-
-</div>
-
-        
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-        
-
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">Then</span>
-  <span class="name">The employee surnames on the first <span class="argument">5</span> pages should include <span class="argument">&quot;Streater&quot;</span>, <span class="argument">&quot;Acland&quot;</span> and <span class="argument">&quot;De la Yglesia&quot;</span>, but not <span class="argument">&quot;Graddon&quot;</span> or <span class="argument">&quot;Shoobridge&quot;</span></span>
-  
-  <span class="lead-duration duration">24.753</span>
-
-</div>
-
-        
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-        
-
-      </div>
-          <div class="step">
-        
-<div class="brief failed">
-  <span class="keyword indention">And</span>
-  <span class="name">Print the number of occurrences to the browser console</span>
-  
-  <span class="lead-duration duration">9.177</span>
-
-</div>
-
-        
-
-        
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-10">
-          <a>org.openqa.selenium.NoSuchElementException:</a>
-      </div>
-      <div id="msg-10" class="collapse collapsable-details  in ">
-        <pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text()='2'] &quot;}
-  (Session info: chrome=79.0.3945.130)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'BELMAs-MacBook-Pro.local', ip: 'fe80:0:0:0:e1:2ecc:ddfb:57f1%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '12.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /var/folders/b4/tvtzb15n5nx...}, goog:chromeOptions: {debuggerAddress: localhost:58372}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 63c33b92fa3fc3c5585198c284852b04
-*** Element info: {Using=xpath, value=//span[text()='2'] }
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at pages.MIReports.getLastNameText(MIReports.java:81)
-	at step_definitions.PracticeTestStepDefinitions.print_the_number_of_occurrences_to_the_browser_console(PracticeTestStepDefinitions.java:70)
-	at &#10045;.Print the number of occurrences to the browser console(src/test/resources/practical-test-.feature:30)
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-        
-        
-
-        
-
-        
-  
-        
-
-      </div>
-      </div>
-</div>
-
-
-    
-  <div class="inner-level hooks-element-after">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-11">
-      
-<div class="brief passed">
-  <span class="keyword indention">Hooks</span>
-  <span class="name"></span>
-  
-
-       <i class="chevron fa fa-fw"></i>
-  </div>
-
-    </div>
-
-    <div id="after-11" class="inner-level collapse collapsable-details ">
-              <div class="hook">
-          <div class="brief passed">
-            <span class="keyword indention">After</span>
-                          <span class="location name">Hook.teardown(Scenario)</span>
-                        
-  <span class="lead-duration duration">0.686</span>
-
-          </div>
-
-                      
-
-          
-                    
-
-          
-    <div class="embeddings inner-level">
-                    <div class="embedding indention">
-        <div data-toggle="collapse" data-target="#embedding-12" class="collapsable-control">
-      <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_1436666190.png" download target="_blank">
-        <span class="download-button glyphicon glyphicon-download-alt"></span>
-      </a>
-    </div>
-    <div id="embedding-12" class="collapse collapsable-details">
-      <div class="embedding-content">
-        <img src="embeddings/embedding_1436666190.png">
+        <img src="embeddings/embedding_253039817.png">
       </div>
     </div>
   </div>
