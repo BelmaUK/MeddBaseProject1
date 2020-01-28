@@ -1,0 +1,174 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": []
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2429644741,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setup(Scenario)"
+            }
+          }
+        ],
+        "line": 35,
+        "name": "Compare absence data with local file",
+        "description": "",
+        "id": "practical-test;compare-absence-data-with-local-file",
+        "after": [
+          {
+            "result": {
+              "duration": 106589308,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.teardown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1487571431,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "I have navigated to the AUT",
+            "match": {
+              "location": "PracticeTestStepDefinitions.i_have_navigated_to_the_AUT()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1174236140,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "I log in with valid credentials",
+            "match": {
+              "location": "PracticeTestStepDefinitions.i_log_in_with_valid_credentials(String,String\u003e\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "EMAIL",
+                  "PASSWORD"
+                ]
+              },
+              {
+                "cells": [
+                  "njF83mf@jN7p.z7B",
+                  "3K4Mq*S%1ejqV0iu^glcK\u0026o$m4q^D157"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 421022424,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "I navigate to the Absence Management page",
+            "match": {
+              "location": "PracticeTestStepDefinitions.i_navigate_to_the_Absence_Management_page()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 117751381,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "I use \"Y\" as the search criteria",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Y\"",
+                  "offset": 6
+                }
+              ],
+              "location": "PracticeTestStepDefinitions.i_use_as_the_search_criteria(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4081727757,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "I perform the search",
+            "match": {
+              "location": "PracticeTestStepDefinitions.i_perform_the_search()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 20055819681,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "I generate the CSV containing the search results",
+            "match": {
+              "location": "PracticeTestStepDefinitions.i_generate_the_CSV_containing_the_search_results()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 19548492287,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "I download the spreadsheet to a predefined directory on the local machine",
+            "match": {
+              "location": "PracticeTestStepDefinitions.i_download_the_spreadsheet_to_a_predefined_directory_on_the_local_machine()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 33370899394,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "The data in the spreadsheet should be consistent with the data displayed on screen *",
+            "match": {
+              "location": "PracticeTestStepDefinitions.the_data_in_the_spreadsheet_should_be_consistent_with_the_data_displayed_on_screen()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@practical2"
+          }
+        ]
+      }
+    ],
+    "name": "Practical Test",
+    "description": "\tIn order to test the AUT\n\tAs a registered user\n\tI want to run the following tests",
+    "id": "practical-test",
+    "keyword": "Feature",
+    "uri": "src/test/resources/practical-test-.feature",
+    "tags": []
+  }
+]

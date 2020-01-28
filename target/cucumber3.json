@@ -1,0 +1,168 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": []
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1590612460,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setup(Scenario)"
+            }
+          }
+        ],
+        "line": 49,
+        "name": "Update the logged-in-user\u0027s details",
+        "description": "",
+        "id": "practical-test;update-the-logged-in-user-s-details",
+        "after": [
+          {
+            "result": {
+              "duration": 106941273,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.teardown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1012638793,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "I have navigated to the AUT",
+            "match": {
+              "location": "PracticeTestStepDefinitions.i_have_navigated_to_the_AUT()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 671008768,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "I log in with valid credentials",
+            "match": {
+              "location": "PracticeTestStepDefinitions.i_log_in_with_valid_credentials(String,String\u003e\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "EMAIL",
+                  "PASSWORD"
+                ]
+              },
+              {
+                "cells": [
+                  "njF83mf@jN7p.z7B",
+                  "3K4Mq*S%1ejqV0iu^glcK\u0026o$m4q^D157"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4168942859,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "I navigate to the Logged-In-User\u0027s Profile page",
+            "match": {
+              "location": "PracticeTestStepDefinitions.i_navigate_to_the_Logged_In_User_s_Profile_page()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 149312639,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "I update the work address details",
+            "match": {
+              "location": "PracticeTestStepDefinitions.i_update_the_work_address_details()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3081181300,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "I update the contact options",
+            "match": {
+              "location": "PracticeTestStepDefinitions.i_update_the_contact_options()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 33196066309,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "I confirm that an error occurs upon attempting to save without populating the required fields",
+            "match": {
+              "location": "PracticeTestStepDefinitions.i_confirm_that_an_error_occurs_upon_attempting_to_save_without_populating_the_required_fields()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10215765488,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "I save the changes",
+            "match": {
+              "location": "PracticeTestStepDefinitions.i_save_the_changes()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10027704721,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "My changes should have successfully applied",
+            "match": {
+              "location": "PracticeTestStepDefinitions.my_changes_should_have_successfully_applied()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@practical3"
+          }
+        ]
+      }
+    ],
+    "name": "Practical Test",
+    "description": "\tIn order to test the AUT\n\tAs a registered user\n\tI want to run the following tests",
+    "id": "practical-test",
+    "keyword": "Feature",
+    "uri": "src/test/resources/practical-test-.feature",
+    "tags": []
+  }
+]

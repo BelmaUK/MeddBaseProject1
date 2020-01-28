@@ -63,12 +63,13 @@ public class AvatarPage {
 
     public void address(){
         Address1Element.clear();
-        Address1Element.sendKeys("4 Warwick Road");
+        Address1Element.sendKeys("Meddbase1");
 
     }
 
 
     public void ContactOption(){
+        scroll(MyAccountElement);
         if(!GeneralConcatEmailCheckBox.isSelected()) {
            waitPlease(10);
             GeneralConcatEmailCheckBox.click();

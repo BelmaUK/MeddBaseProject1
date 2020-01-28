@@ -1,0 +1,15 @@
+utilities/BrowserUtils.class
+utilities/BrowserUtils$1.class
+pages/AvatarPage.class
+step_definitions/Hook.class
+pages/AbsentMPage.class
+utilities/Pages.class
+utilities/Driver.class
+runners/CukesRunner1.class
+pages/MIReports.class
+runners/CukesRunner2.class
+utilities/ConfigurationReader.class
+step_definitions/PracticeTestStepDefinitions.class
+pages/LoginPage.class
+runners/CukesRunner3.class
+utilities/ExcelUtilities.class
